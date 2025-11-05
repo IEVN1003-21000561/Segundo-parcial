@@ -1,17 +1,15 @@
 {% extends "layout.html" %}
-    {% import "_macros.html" as datos_macro %}
-    {% block container %}
-    <h1>Calcular Distancia entre dos puntos</h1>
 
-    <form action="" method="post">
-        {{ datos_macro.datos('x1','Ingrese X1','number') }}
-        {{ datos_macro.datos('y1','Ingrese Y1','number') }}
-        {{ datos_macro.datos('x2','Ingrese X2','number') }}
-        {{ datos_macro.datos('y2','Ingrese Y2','number') }}
-        <button type="submit" class="btn btn-primary">Calcular</button>
+
+{% block content%}
+{% import "_macros.html" import macro %}    
+    <h1>Distancia</h1>
+    <form  class="form-control" action ="" method="post">
+        {{macro,campo1('x1','Ingrese x1',"number")}}
+        {{macro,campo1('y1','Ingrese y1',"email")}}
+        {{macro,campo1('x2','Ingrese x2',"password")}}
+        {{macro,campo1('y2','Ingrese y2')}}
+
     </form>
-
-
-    <h3>La distancia entre ({{x1}}, {{y1}}) y ({{x2}}, {{y2}}) es: {{distancia}}</h3>
-
-{% endblock %}
+    
+{% endblock%}

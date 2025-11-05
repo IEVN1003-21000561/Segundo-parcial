@@ -1,17 +1,21 @@
+{% extends "layout.html" %}
 
-{% extends "layout.html"%}
-    {% import "_macros.html" as macro%}
-    {%  block container %}
-    <form action="" method="post" novalidate>
-        {{macro.camposNuevos(form.matricula)}}
-        {{macro.camposNuevos(form.nombre)}}
-        {{macro.camposNuevos(form.apellido)}}
-        {{macro.camposNuevos(form.correo)}}
-        <input type="submit" value="Guardar" class="btn btm-primary">
+{% block content%}
+
+{%import "_macros.html" as macro%}
+
+<h1>Formulario de Alumnos</h1>
+    <form action ="" method="post" class="form-control"novalidate >
+        {{macro,campoNuevo(form.matricula)}}
+        {{macro,campoNuevo(form.nombre)}}
+        {{macro,campoNuevo(form.apellido)}}
+        {{macro,campoNuevo(form.correo)}}
+        <button type="submit" class="btn btn-primary">Enviar</button>
+
     </form>
+   <h2>Matricula: {{mat}}</h2>
+   <h2>Nombre: {{nom}}</h2>
+   <h2>Apellido: {{ape}}</h2>
+   <h2>Email: {{em}}</h2>
 
-    <h2>Matricula: {{mat}} </h2>
-    <h2>Nombre: {{nom}} </h2>
-    <h2>Apellido: {{ape}} </h2>
-    <h2>Correo: {{email}} </h2>
-    {% endblock  %}
+{%endmacro%}

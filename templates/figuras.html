@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+{% import "_macros.html" as macro %}
+
+<h1>Figura</h1>
+
+<form action="" method="post" class="form-control" novalidate>
+
+    <p>Seleccione una figura:</p>
+    <label><input type="radio" name="figura" value="triangulo" required> Triángulo</label><br>
+    <label><input type="radio" name="figura" value="rectangulo"> Rectángulo</label><br>
+    <label><input type="radio" name="figura" value="circulo"> Círculo</label><br>
+    <label><input type="radio" name="figura" value="pentagono"> Pentágono</label><br><br>
+
+    {{ macro.campoNuevo(form.base) }}
+    {{ macro.campoNuevo(form.altura) }}
+    {{ macro.campoNuevo(form.largo) }}
+    {{ macro.campoNuevo(form.ancho) }}
+    {{ macro.campoNuevo(form.radio) }}
+    {{ macro.campoNuevo(form.lado) }}
+
+    <button type="submit" class="btn btn-primary">Calcular área</button>
+
+</form>
+
+{% if area %}
+    <h2>Figura seleccionada: {{ figura }}</h2>
+    <h2>El área calculada es: {{ area }}</h2>
+{% endif %}
+
+{% endblock %}
