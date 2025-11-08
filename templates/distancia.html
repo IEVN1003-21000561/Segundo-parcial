@@ -1,8 +1,26 @@
+{% extends "layout.html" %}
+{% import "_macros.html" as macro %}
 
-    {% extends "layout.html" %}
-    
-    {% block content %}
-    <h1>
-        Distancia
-    </h1>
-    {% endblock %}
+{% block container %}
+<div class="col-md-8 offset-md-2">
+    <h1>Calculadora de Distancia</h1>
+
+    <form action="" method="post">
+        {{ macro.campo1('x1', 'Ingrese x1', 'number') }}
+        {{ macro.campo1('y1', 'Ingrese y1', 'number') }}
+        {{ macro.campo1('x2', 'Ingrese x2', 'number') }}
+        {{ macro.campo1('y2', 'Ingrese y2', 'number') }}
+        
+        <button type="submit" class="btn btn-primary mt-2">Calcular</button>
+    </form>
+
+    {% if distancia %}
+    <div class="mt-4 alert alert-success">
+        <h3>Resultado:</h3>
+        <p>Punto 1: ({{ x1 }}, {{ y1 }})</p>
+        <p>Punto 2: ({{ x2 }}, {{ y2 }})</p>
+        <p><strong>Distancia: {{ distancia }}</strong></p>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
