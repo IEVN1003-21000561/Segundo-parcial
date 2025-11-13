@@ -1,5 +1,6 @@
 {% extends "layout.html" %}
 
+<<<<<<< HEAD
 {% block title %}Inicio{% endblock %}
 
 {% block content %}
@@ -13,3 +14,18 @@
         {% endfor %}
     </ul>
 {% endblock %}
+=======
+
+{% block content %}
+    
+    <h1>Hola desde el index!!!</h1>
+
+<h2>{{ titulo }}</h2>
+<ul>
+    {% for opera in listado %}
+    <li>{{ opera }}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
+>>>>>>> 1317c8c23f0228b2ae5db8fdbb9773c0dcd23a3f

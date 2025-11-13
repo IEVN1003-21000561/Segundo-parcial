@@ -1,4 +1,5 @@
 {% extends "layout.html" %}
+<<<<<<< HEAD
     
     {% block content %}
 
@@ -22,3 +23,29 @@
         Resultado:{{resultado}}
     </h1>
     {% endblock %}
+=======
+
+
+{% block content%}
+    
+    <h1>operas</h1>
+
+    <form  class="form-control" action ="" method="post">
+        <div class="mb-3">
+            <label for="n1" class="form-label">N1</label>
+            <input type="text" class="form-control" ide="n1" name="n1"
+            >
+        </div>
+        <div class="mb-3">
+            <label for="n2" class="form-label">N2</label>
+            <input type="text" class="form-control" ide="n2" name="n2"
+            >
+        </div>
+        <button type="submit" class="btn btn-primary" >Calcular</button>
+
+    </form>
+
+<h1>Resultado:{{resultado}}</h1>
+
+{% endblock %}
+>>>>>>> 1317c8c23f0228b2ae5db8fdbb9773c0dcd23a3f
