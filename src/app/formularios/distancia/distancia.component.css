@@ -1,2 +1,18 @@
+.formulario-box {
+  max-width: 400px;
+  width: 100%;
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
 
-
+.resultado-box {
+  max-width: 400px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 20px;
+  text-align: center;
+  background-color: #ffffff; /* fondo blanco sin azul */
+}

@@ -4,7 +4,7 @@ export default [
   {
     path: 'listaalumnos',
     loadComponent: () =>
-      import('./alumnos/alumnos.component').then((c) => c.AlumnosComponent),
+      import('./alumnos/alumnos.component'),
   },
   {
     path: 'agregar',

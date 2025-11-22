@@ -8,7 +8,7 @@
 }
 
 .resultado-card {
-  background-color: #e3f2fd; /* Celeste suave */
+  background-color: #e3f2fd;
   border-left: 6px solid #2196f3;
 }
 
@@ -20,6 +20,12 @@
 img {
   transition: transform 0.3s ease;
 }
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+}
 
 img:hover {
   transform: scale(1.08);
@@ -29,3 +35,9 @@ button {
   font-weight: bold;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}

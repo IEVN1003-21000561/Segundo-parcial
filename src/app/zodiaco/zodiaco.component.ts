@@ -22,18 +22,18 @@ export class ZodiacoComponent implements OnInit {
   ]
 
   imagenes: { [key: string]: string } = {
-    rata: 'https://confuciomag.com/wp-content/uploads/2016/01/06_horoscopo_chino_Rata.jpg',
-    buey: 'https://confuciomag.com/wp-content/uploads/2016/01/06_horoscopo_chino_Buey.jpg',
-    tigre: 'https://confuciomag.com/wp-content/uploads/2016/01/06_horoscopo_chino_Tigre.jpg',
-    conejo: 'https://confuciomag.com/wp-content/uploads/2016/01/06_horoscopo_chino_Conejo.jpg',
-    dragon: 'https://confuciomag.com/wp-content/uploads/2016/01/06_horoscopo_chino_Dragon.jpg',
-    serpiente: 'https://confuciomag.com/wp-content/uploads/2016/01/06_horoscopo_chino_Serpiente.jpg',
-    caballo: 'https://confuciomag.com/wp-content/uploads/2016/01/06_horoscopo_chino_Caballo.jpg',
-    cabra: 'https://confuciomag.com/wp-content/uploads/2016/01/06_horoscopo_chino_Cabra.jpg',
-    mono: 'https://confuciomag.com/wp-content/uploads/2016/01/06_horoscopo_chino_Mono.jpg',
-    gallo: 'https://confuciomag.com/wp-content/uploads/2016/01/06_horoscopo_chino_Gallo.jpg',
-    perro: 'https://confuciomag.com/wp-content/uploads/2016/01/06_horoscopo_chino_Perro.jpg',
-    cerdo: 'https://confuciomag.com/wp-content/uploads/2016/01/06_horoscopo_chino_Cerdo.jpg'
+    rata: 'https://i.imgur.com/RzsPKjT.png',
+    buey: 'https://i.imgur.com/MuATcnC.png',
+    tigre: 'https://i.imgur.com/9l9kzXO.png',
+    conejo: 'https://i.imgur.com/DDTHKH8.png',
+    dragon: 'https://i.imgur.com/0Z6wZmr.png',
+    serpiente: 'https://i.imgur.com/wC6weoa.png',
+    caballo: 'https://i.imgur.com/phOOMqm.png',
+    cabra: 'https://i.imgur.com/G6lGifG.png',
+    mono: 'https://i.imgur.com/wwZ7PkW.png',
+    gallo: 'https://i.imgur.com/pKYnkAT.png',
+    perro: 'https://i.imgur.com/7CiBzVv.png',
+    cerdo: 'https://i.imgur.com/MZCIWek.png'
   }
 
   fechaAnoActual = new Date().getFullYear()

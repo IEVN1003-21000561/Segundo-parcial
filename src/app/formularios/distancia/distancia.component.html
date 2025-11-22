@@ -1,46 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <title>Document</title>
-</head>
-<body>
-<div class="container d-flex justify-content-center align-items-center vh-100 bg-light">
-  <div class="card shadow-lg p-4" style="max-width: 500px; width: 100%;">
-    <h4 class="text-center mb-4 text-primary fw-bold">Distancia entre dos puntos</h4>
-    <form [formGroup]="formulario" (ngSubmit)="calcular()">
-      <div class="row">
-        <div class="col-6 mb-3">
-          <label class="form-label">X₁:</label>
-          <input type="text" class="form-control" formControlName="x1">
-        </div>
-        <div class="col-6 mb-3">
-          <label class="form-label">Y₁:</label>
-          <input type="text" class="form-control" formControlName="y1">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-6 mb-3">
-          <label class="form-label">X₂:</label>
-          <input type="text" class="form-control" formControlName="x2">
-        </div>
-        <div class="col-6 mb-3">
-          <label class="form-label">Y₂:</label>
-          <input type="text" class="form-control" formControlName="y2">
-        </div>
-      </div>
-      <div class="text-center">
-        <button type="submit" class="btn btn-primary w-100">Calcular</button>
-      </div>
-    </form>
-    <div class="alert alert-info mt-4 text-center" [style.display]="mostrarResultado ? 'block' : 'none'">
-      <strong>Resultado:</strong> La distancia entre los puntos es
-      <span class="fw-bold">{{ resultado }}</span>
-    </div>
-  </div>
-</div>
-</body>
-</html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <style>
+      .formulario-box {
+        max-width: 400px;
+        width: 100%;
+        background-color: #f5f5f5;
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      }
 
+      .resultado-box {
+        max-width: 400px;
+        width: 100%;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 16px;
+        margin-top: 20px;
+        text-align: center;
+      }
+    </style>
+    <title>Distancia entre dos puntos</title>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4">
+          <div class="formulario-box p-4">
+            <h4 class="text-center mb-4 text-primary fw-bold">Distancia entre dos puntos</h4>
+            <form [formGroup]="formulario">
+              <div class="row">
+                <div class="col-6 mb-3">
+                  <label class="form-label">X1:</label>
+                  <input type="text" class="form-control" formControlName="x1" />
+                </div>
+                <div class="col-6 mb-3">
+                  <label class="form-label">Y1:</label>
+                  <input type="text" class="form-control" formControlName="y1" />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6 mb-3">
+                  <label class="form-label">X2:</label>
+                  <input type="text" class="form-control" formControlName="x2" />
+                </div>
+                <div class="col-6 mb-3">
+                  <label class="form-label">Y2:</label>
+                  <input type="text" class="form-control" formControlName="y2" />
+                </div>
+              </div>
+              <button
+                type="button"
+                class="btn btn-primary w-100"
+                (click)="calcular()"
+              >
+                Calcular
+              </button>
+            </form>
+          </div>
+
+          <div
+            class="resultado-box"
+            [style.display]="mostrarResultado ? 'block' : 'none'"
+          >
+            <p class="fw-bold">La distancia entre los puntos es: {{ resultado }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

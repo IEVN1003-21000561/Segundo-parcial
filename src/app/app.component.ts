@@ -7,7 +7,7 @@ import { DistanciaComponent } from './formularios/distancia/distancia.component'
 import { ZodiacoComponent } from './zodiaco/zodiaco.component';
 import { AporbComponent } from './aporb/aporb.component';
 import { RouterOutlet } from "@angular/router";
-import { TempComponent } from "./tem/temp/temp.component";
+
 
 @Component({
   selector: 'app-root',
@@ -22,7 +22,7 @@ import { TempComponent } from "./tem/temp/temp.component";
     DistanciaComponent,
     AporbComponent,
     RouterOutlet,
-    TempComponent
+
 ]
 })
 export class AppComponent implements OnInit {
